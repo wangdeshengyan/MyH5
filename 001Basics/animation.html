@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>test1</title>
+    <style>
+      div{
+        border:2px solid #aaaaaa;
+        height:100px;
+        width:300px;
+	      background-color:yellow;
+	      box-shadow:10px 10px 5px #888888;
+        border-radius:25px;
+      }
+    </style>
+	</head>
+	<body>
+    <div></div>
+    <script>
+      var div=document.querySelector('div');
+      var Width=div.offsetWidth;
+      var timer=setInterval(()=>{
+        div.style.width=Width+'1px';
+      },1000)
+      if(div.style.width>=40){
+        clearInterval(timer)
+
+      }
+    </script>
+	</body>
+</html>
